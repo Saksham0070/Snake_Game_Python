@@ -11,7 +11,7 @@ BACKGROUND_COLOR = (110, 110, 5)
 class Apple:
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
-        self.image = pygame.image.load(r"C:\Users\sagar\OneDrive\Desktop\Apple.jpg").convert()
+        self.image = pygame.image.load(r"C:\Users\sagar\HTML\Python_Project\Apple.jpg").convert()
         self.x = 120
         self.y = 120
                                                                             
@@ -26,7 +26,7 @@ class Apple:
 class Snake:
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
-        self.image = pygame.image.load(r"C:\Users\sagar\OneDrive\Desktop\SeekPng.com_squares-png_1155496 (1).jpg").convert()
+        self.image = pygame.image.load(r"C:\Users\sagar\HTML\Python_Project\SeekPng.com_squares-png_1155496 (1).jpg").convert()
         self.direction = 'down'
 
         self.length = 1
