@@ -2,6 +2,7 @@
 
 import pygame
 from pygame.locals import *
+from pygame import mixer
 import time
 import random
 
@@ -11,7 +12,7 @@ BACKGROUND_COLOR = (110, 110, 5)
 class Apple:
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
-        self.image = pygame.image.load(r"C:\Users\sagar\HTML\Python_Project\Apple.jpg").convert()
+        self.image = pygame.image.load(r"C:\Users\rames\OneDrive\Desktop\Git\snake_game_python\Snake_Game_Python\Apple.jpg").convert()
         self.x = 120
         self.y = 120
                                                                             
@@ -26,7 +27,7 @@ class Apple:
 class Snake:
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
-        self.image = pygame.image.load(r"C:\Users\sagar\HTML\Python_Project\SeekPng.com_squares-png_1155496 (1).jpg").convert()
+        self.image = pygame.image.load(r"C:\Users\rames\OneDrive\Desktop\Git\snake_game_python\Snake_Game_Python\SeekPng.com_squares-png_1155496 (1).jpg").convert()
         self.direction = 'down'
 
         self.length = 1
@@ -107,7 +108,7 @@ class Game:
             self.snake.increase_length()
             self.apple.move()
 
-        # snake colliding with itself
+        # snake colliding with itself       
         for i in range(2, self.snake.length):
             if self.is_collision(self.snake.x[0], self.snake.y[0], self.snake.x[i], self.snake.y[i]):
                 raise "Collision Occured"
@@ -130,6 +131,10 @@ class Game:
     def run(self):
         running = True
         pause = False
+
+        mixer.init()
+        mixer.music.load(r'C:\Users\rames\OneDrive\Desktop\Git\snake_game_python\Snake_Game_Python\Raja-Raja-Kareja-Me-Samaja-Sani-Shukla.ogg')
+        mixer.music.play()
 
         while running:
             for event in pygame.event.get():
