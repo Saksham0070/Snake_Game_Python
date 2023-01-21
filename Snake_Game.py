@@ -133,7 +133,7 @@ class Game:
         pause = False
 
         mixer.init()
-        mixer.music.load(r'C:\Users\rames\OneDrive\Desktop\Git\snake_game_python\Snake_Game_Python\Raja-Raja-Kareja-Me-Samaja-Sani-Shukla.ogg')
+        mixer.music.load(r"C:\Users\rames\OneDrive\Desktop\Git\snake_game_python\Snake_Game_Python\0125.-Imagination-AShamaluevMusic.ogg")
         mixer.music.play()
 
         while running:
